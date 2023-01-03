@@ -26,14 +26,7 @@ twilio.messages
 });
 })
 
-routes.get("/get",(req,res)=>{
-    const client = require('twilio')("AC412c18c4e6febed43ff704f734f00505", "05836cee4f8e546adb5cb5d8814c8880");
 
-client.messages('MMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-      .media
-      .list({limit: 20})
-      .then(media => media.forEach(m => console.log(m.sid)));
-})
 
 
 module.exports  = routes
